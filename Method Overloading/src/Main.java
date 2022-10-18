@@ -13,5 +13,12 @@ public class Main {
         FeetInchesConversion.calcFeetAndInchesToCentimeters(8,13);
         System.out.println("---------------------------------------------------------------------");
         FeetInchesConversion.calcFeetAndInchesToCentimeters(360);
+        System.out.println("---------------------------------------------------------------------");
+        System.out.println("Hours Convertion program ");
+        String time=HoursConvertion.getDurationString(450);
+        System.out.println("The time is :"+time);
+        System.out.println("---------------------------------------------------------------------");
+        time=HoursConvertion.getDurationString(350,35);
+        System.out.println("The time is :"+time);
     }
 }
