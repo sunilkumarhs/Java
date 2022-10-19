@@ -18,7 +18,7 @@ public class Main {
         String time=HoursConvertion.getDurationString(450);
         System.out.println("The time is :"+time);
         System.out.println("---------------------------------------------------------------------");
-        time=HoursConvertion.getDurationString(350,35);
+        time=HoursConvertion.getDurationString(30,35);
         System.out.println("The time is :"+time);
     }
 }
