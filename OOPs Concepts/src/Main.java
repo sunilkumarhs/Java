@@ -5,7 +5,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         int mChoice,choice;
         do{
-            System.out.println("1:Car Class \n 2:BankAccount Class \n 3.VipCustomer Class \n 4.Exit");
+            System.out.println("1:Car Class \n 2:BankAccount Class \n 3.VipCustomer Class \n 4.WallArea Class \n 5.Exit");
             System.out.println("Enter Your choice :");
             mChoice = scan.nextInt();
             switch (mChoice) {
@@ -86,11 +86,18 @@ public class Main {
                             +"Email address is :"+vp3.getEmail());
                     break;
                 case 4:
+                    WallArea wa=new WallArea();
+                    WallArea wa1=new WallArea(17,-5);
+                    System.out.println("The value of the width of the wall is : "+wa1.getWidth());
+                    System.out.println("The value of the height of the wall is : "+wa1.getHeight());
+                    System.out.println("The area of the wall is  : "+wa1.getArea());
+                    break;
+                case 5:
                     System.out.println("Exiting from Program!!!");
                     break;
                 default:
                     System.out.println("Invalid Input");
             }
-        }while(mChoice!=4);
+        }while(mChoice!=5);
     }
 }
