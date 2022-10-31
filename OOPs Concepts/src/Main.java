@@ -5,7 +5,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         int mChoice,choice;
         do{
-            System.out.println("1:CarClass \n 2:BankAccount \n 3.Exit");
+            System.out.println("1:Car Class \n 2:BankAccount Class \n 3.VipCustomer Class \n 4.Exit");
             System.out.println("Enter Your choice :");
             mChoice = scan.nextInt();
             switch (mChoice) {
@@ -38,12 +38,7 @@ public class Main {
                     System.out.println("Number of seats in car is : " + tata.getSeats());
                     break;
                 case 2:
-                    BankAccount ba = new BankAccount();
-                    ba.setAccNumber(1718010420);
-                    ba.setCusName("SunilKumarHS");
-                    ba.seteMail("sunilkumarhs97@gmail.com");
-                    ba.setPhoneNumber(123456789);
-                    ba.setBalance(0);
+                    BankAccount ba = new BankAccount(1718010420,"SunilKumarHS","sunilhs97@gmil.com",123456789);
                     System.out.println("Account Number is :" + ba.getAccNumber());
                     System.out.println("Name of the account holder is :" + ba.getCusName());
                     System.out.println("Phone Number is :" + ba.getPhoneNumber());
@@ -70,11 +65,32 @@ public class Main {
                     }while(choice!=4);
                     break;
                 case 3:
+                    VipCustomer vp1=new VipCustomer();
+                    System.out.println("The details of the default vip customer is :");
+                    System.out.println("Name :"+vp1.getName()+"\n"
+                                       +"Credit Limit is :"+vp1.getCreditLimit()+"\n"
+                                       +"Email address is :"+vp1.getEmail());
+                    System.out.println("----------------------------------------------------------------------------");
+                    System.out.println(" ");
+                    VipCustomer vp2=new VipCustomer("Varun","varun@gmail.com");
+                    System.out.println("The details of the 2 parameter vip customer is :");
+                    System.out.println("Name :"+vp2.getName()+"\n"
+                                      +"Credit Limit is :"+vp2.getCreditLimit()+"\n"
+                                      +"Email address is :"+vp2.getEmail());
+                    System.out.println("----------------------------------------------------------------------------");
+                    System.out.println(" ");
+                    VipCustomer vp3=new VipCustomer("Raju",50000,"raju@gmail.com");
+                    System.out.println("The details of the 3 parameter vip customer is :");
+                    System.out.println("Name :"+vp3.getName()+"\n"
+                            +"Credit Limit is :"+vp3.getCreditLimit()+"\n"
+                            +"Email address is :"+vp3.getEmail());
+                    break;
+                case 4:
                     System.out.println("Exiting from Program!!!");
                     break;
                 default:
                     System.out.println("Invalid Input");
             }
-        }while(mChoice!=3);
+        }while(mChoice!=4);
     }
 }

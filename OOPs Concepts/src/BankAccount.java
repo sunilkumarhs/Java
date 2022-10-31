@@ -7,25 +7,12 @@ public class BankAccount {
     private String cusName;
     private String eMail;
     private long phoneNumber;
-
-    public void setAccNumber(long accNumber) {
-        this.accNumber = accNumber;
-    }
-
-    public void setBalance(double balance) {
-        this.balance = balance;
-    }
-
-    public void setCusName(String cusName) {
-        this.cusName = cusName;
-    }
-
-    public void seteMail(String eMail) {
-        this.eMail = eMail;
-    }
-
-    public void setPhoneNumber(long phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public BankAccount(long accNumber,String cusName,String eMail,long phoneNumber) {
+        this.accNumber=accNumber;
+        this.balance=0.00;
+        this.cusName=cusName;
+        this.eMail=eMail;
+        this.phoneNumber=phoneNumber;
     }
     public void deposit() {
         System.out.println("Enter the account number :");
