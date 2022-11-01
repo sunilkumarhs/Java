@@ -5,7 +5,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         int mChoice,choice;
         do{
-            System.out.println("1:Car Class \n 2:BankAccount Class \n 3.VipCustomer Class \n 4.WallArea Class \n 5.Point Class \n 6.FloorCarpetArea Class \n 7.Exit");
+            System.out.println("1:Car Class \n 2:BankAccount Class \n 3.VipCustomer Class \n 4.WallArea Class \n 5.Point Class \n 6.FloorCarpetArea Class \n 7.ComplexNumber Class \n 8.Exit");
             System.out.println("Enter Your choice :");
             mChoice = scan.nextInt();
             switch (mChoice) {
@@ -87,6 +87,10 @@ public class Main {
                     break;
                 case 4:
                     WallArea wa=new WallArea();
+                    System.out.println("The value of the width of the wall is : "+wa.getWidth());
+                    System.out.println("The value of the height of the wall is : "+wa.getHeight());
+                    System.out.println("----------------------------------------------------------------------------");
+                    System.out.println(" ");
                     WallArea wa1=new WallArea(17,-5);
                     System.out.println("The value of the width of the wall is : "+wa1.getWidth());
                     System.out.println("The value of the height of the wall is : "+wa1.getHeight());
@@ -98,6 +102,8 @@ public class Main {
                     System.out.println("distance(0,0)= " + first.distance());
                     System.out.println("distance(second)= " + first.distance(second));
                     System.out.println("distance(2,2)= " + first.distance(2, 2));
+                    System.out.println("----------------------------------------------------------------------------");
+                    System.out.println(" ");
                     Point point = new Point(1,-1);
                     System.out.println("distance()= " + point.distance());
                     System.out.println("distance(Point p) = "+second.distance(point));
@@ -107,17 +113,36 @@ public class Main {
                     Floor floor = new Floor(2.75, 4.0);
                     Calculator calculator = new Calculator(floor, carpet);
                     System.out.println("Total Cost of FloorCarpet = " + calculator.getTotalCost());
+                    System.out.println("----------------------------------------------------------------------------");
+                    System.out.println(" ");
                     carpet = new Carpet(1.5);
                     floor = new Floor(5.4, 4.5);
                     calculator = new Calculator(floor, carpet);
                     System.out.println("Total Cost of FloorCarpet = " + calculator.getTotalCost());
                     break;
                 case 7:
+                    ComplexNumber one = new ComplexNumber(1.0, 1.0);
+                    ComplexNumber number = new ComplexNumber(2.5, -1.5);
+                    one.add(1,1);
+                    System.out.println("one.real= " + one.getReal());
+                    System.out.println("one.imaginary= " + one.getImaginary());
+                    System.out.println("----------------------------------------------------------------------------");
+                    System.out.println(" ");
+                    one.subtract(number);
+                    System.out.println("one.real= " + one.getReal());
+                    System.out.println("one.imaginary= " + one.getImaginary());
+                    System.out.println("----------------------------------------------------------------------------");
+                    System.out.println(" ");
+                    number.subtract(one);
+                    System.out.println("number.real= " + number.getReal());
+                    System.out.println("number.imaginary= " + number.getImaginary());
+                    break;
+                case 8:
                     System.out.println("Exiting from Program!!!");
                     break;
                 default:
                     System.out.println("Invalid Input");
             }
-        }while(mChoice!=7);
+        }while(mChoice!=8);
     }
 }

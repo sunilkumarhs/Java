@@ -2,7 +2,9 @@ public class WallArea {
     private double width;
     private double height;
     public WallArea(){
-
+        System.out.println("Default constructor called");
+        this.width=0;
+        this.height=0;
     }
     public WallArea(double width,double height) {
         if(width<0) {
