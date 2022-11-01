@@ -5,7 +5,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         int mChoice,choice;
         do{
-            System.out.println("1:Car Class \n 2:BankAccount Class \n 3.VipCustomer Class \n 4.WallArea Class \n 5.Exit");
+            System.out.println("1:Car Class \n 2:BankAccount Class \n 3.VipCustomer Class \n 4.WallArea Class \n 5.Point Class \n 6.Exit");
             System.out.println("Enter Your choice :");
             mChoice = scan.nextInt();
             switch (mChoice) {
@@ -93,11 +93,21 @@ public class Main {
                     System.out.println("The area of the wall is  : "+wa1.getArea());
                     break;
                 case 5:
+                    Point first = new Point(6, 5);
+                    Point second = new Point(3, 1);
+                    System.out.println("distance(0,0)= " + first.distance());
+                    System.out.println("distance(second)= " + first.distance(second));
+                    System.out.println("distance(2,2)= " + first.distance(2, 2));
+                    Point point = new Point(1,-1);
+                    System.out.println("distance()= " + point.distance());
+                    System.out.println("distance(Point p) = "+second.distance(point));
+                    break;
+                case 6:
                     System.out.println("Exiting from Program!!!");
                     break;
                 default:
                     System.out.println("Invalid Input");
             }
-        }while(mChoice!=5);
+        }while(mChoice!=6);
     }
 }
