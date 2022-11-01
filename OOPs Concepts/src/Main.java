@@ -5,7 +5,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         int mChoice,choice;
         do{
-            System.out.println("1:Car Class \n 2:BankAccount Class \n 3.VipCustomer Class \n 4.WallArea Class \n 5.Point Class \n 6.Exit");
+            System.out.println("1:Car Class \n 2:BankAccount Class \n 3.VipCustomer Class \n 4.WallArea Class \n 5.Point Class \n 6.FloorCarpetArea Class \n 7.Exit");
             System.out.println("Enter Your choice :");
             mChoice = scan.nextInt();
             switch (mChoice) {
@@ -103,11 +103,21 @@ public class Main {
                     System.out.println("distance(Point p) = "+second.distance(point));
                     break;
                 case 6:
+                    Carpet carpet = new Carpet(3.5);
+                    Floor floor = new Floor(2.75, 4.0);
+                    Calculator calculator = new Calculator(floor, carpet);
+                    System.out.println("Total Cost of FloorCarpet = " + calculator.getTotalCost());
+                    carpet = new Carpet(1.5);
+                    floor = new Floor(5.4, 4.5);
+                    calculator = new Calculator(floor, carpet);
+                    System.out.println("Total Cost of FloorCarpet = " + calculator.getTotalCost());
+                    break;
+                case 7:
                     System.out.println("Exiting from Program!!!");
                     break;
                 default:
                     System.out.println("Invalid Input");
             }
-        }while(mChoice!=6);
+        }while(mChoice!=7);
     }
 }
