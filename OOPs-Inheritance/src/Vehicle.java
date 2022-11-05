@@ -2,12 +2,13 @@ public class Vehicle {
     private double currentVelocity;
     private double currentDirection;
     final double maxDirection = 360;
-    private int size;
+    private double size;
 
-    public Vehicle() {
+    public Vehicle(double size) {
         this.currentVelocity = 0;
         this.currentDirection = 0;
-        this.size = 0;
+        this.size = size;
+
     }
 
     public void direction() {
@@ -29,7 +30,7 @@ public class Vehicle {
         return currentDirection;
     }
 
-    public int getSize() {
+    public double getSize() {
         return size;
     }
 

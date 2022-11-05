@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class SUV extends Car{
     Scanner scan = new Scanner(System.in);
+    private String company;
     private String name;
     private String color;
     private double maxSpeed;
@@ -12,8 +13,9 @@ public class SUV extends Car{
     private String fuelType;
     private double breakValue;
 
-    public SUV(boolean isManual, int maxFuel, String name, String color, double maxSpeed, String fuelType) {
-        super(5, 6, isManual,5, maxFuel);
+    public SUV(double size,boolean isManual, int maxFuel,String company, String name, String color, double maxSpeed, String fuelType) {
+        super(size,5, 6, isManual,5, maxFuel);
+        this.company = company;
         this.name = name;
         this.color = color;
         this.maxSpeed = maxSpeed;
@@ -27,25 +29,25 @@ public class SUV extends Car{
 
     public void startCar(){
         System.out.println("please enter 'true' to close the door!!");
-        doorLock = scan.nextBoolean();
-        if(doorLock) {
+        this.doorLock = scan.nextBoolean();
+        if(this.doorLock) {
             System.out.println("please enter 'true' to start the car!!");
-            start = scan.nextBoolean();
-            if(start) {
-                if(getFuelGage()==0){
-                    displayFuelGage();
+            this.start = scan.nextBoolean();
+            if(this.start) {
+                if(super.getFuelGage()==0){
+                    super.displayFuelGage();
                     addFuel();
                 }else {
                     System.out.println("Car is Started!!");
-                    displayFuelGage();
-                    this.setCurrentVelocity(0);
-                    this.setCurrentDirection(0);
-                    this.setCurrentGear(0);
-                    move();
-                    if (isManual()) {
+                    super.displayFuelGage();
+                    super.setCurrentVelocity(0);
+                    super.setCurrentDirection(0);
+                    super.setCurrentGear(0);
+                    super.move();
+                    if (super.isManual()) {
                         System.out.println("Enter the push gear value!!");
                         int pushGear = scan.nextInt();
-                        changeGear(pushGear);
+                        super.changeGear(pushGear);
                         moveDirection();
                     } else {
                         moveDirection();
@@ -64,31 +66,31 @@ public class SUV extends Car{
     public void addFuel() {
         System.out.println("enter the fuel value to start car!!");
         int fuel = scan.nextInt();
-        if((fuel+getFuelGage())>getMaxFuel()) {
+        if((fuel+super.getFuelGage())>super.getMaxFuel()) {
             System.out.println("Fuel is more to store in the car fuel tank, enter proper fuel value!!");
             addFuel();
         }
         else {
-            setFuelGage(fuel);
-            displayFuelGage();
+            super.setFuelGage(fuel);
+            super.displayFuelGage();
             startCar();
         }
     }
 
     public void acceleration() {
-        if(getCurrentVelocity() == maxSpeed) {
+        if(super.getCurrentVelocity() == this.maxSpeed) {
             System.out.println("!!reached the maximum speed of the car!!");
             System.out.println("Please apply the break, !!max speed is not good to drive!!");
             applyingBreak();
         }else {
             System.out.println("Enter the accelerate value !!");
-            accelerate = scan.nextDouble();
-            if (accelerate + getCurrentVelocity() <= maxSpeed) {
-                increaseCurrentVelocity(accelerate);
-                move();
+            this.accelerate = scan.nextDouble();
+            if (this.accelerate + super.getCurrentVelocity() <= this.maxSpeed) {
+                super.increaseCurrentVelocity(this.accelerate);
+                super.move();
                 System.out.println("Please enter 'true' to apply the break!! OR !!enter 'false' to continue the drive!!");
-                applyBreak = scan.nextBoolean();
-                if (applyBreak) {
+                this.applyBreak = scan.nextBoolean();
+                if (this.applyBreak) {
                     applyingBreak();
                 } else {
                     acceleration();
@@ -104,7 +106,7 @@ public class SUV extends Car{
         System.out.println("Enter the direction value!!");
         double direction = scan.nextDouble();
         if(direction <= maxDirection) {
-            setCurrentDirection(direction);
+            super.setCurrentDirection(direction);
             acceleration();
         }else {
             System.out.println("!!enter the proper direction value!!");
@@ -115,30 +117,29 @@ public class SUV extends Car{
     public void applyingBreak() {
         System.out.println("Enter the value of the break!! OR !!Enter max break value to stop the car!!");
         this.breakValue = scan.nextDouble();
-        if(this.breakValue <= getCurrentVelocity()) {
-            if(this.breakValue == getCurrentVelocity()) {
+        if(this.breakValue <= super.getCurrentVelocity()) {
+            if(this.breakValue == super.getCurrentVelocity()) {
                 System.out.println(" !!Car is stopping !! ");
-                setCurrentVelocity(0);
+                super.setCurrentVelocity(0);
                 System.out.println("Please enter 'true' to continue driving OR !!enter 'false' to exit from car");
                 boolean choice = scan.nextBoolean();
                 if(choice) {
-                    move();
+                    super.move();
                     acceleration();
                 }else {
-                    System.out.println("Exited from car");
+                    System.out.println("Exited from "+this.name);
                     System.exit(0);
                 }
             }else {
-                decreaseCurrentVelocity(breakValue);
-                move();
+                super.decreaseCurrentVelocity(breakValue);
+                super.move();
                 acceleration();
             }
         }else {
             System.out.println("!!Enter proper break value!!");
-            move();
+            super.move();
             applyingBreak();
         }
-
     }
 
     public String getName() {
@@ -171,5 +172,13 @@ public class SUV extends Car{
 
     public String getFuelType() {
         return fuelType;
+    }
+
+    public String getCompany() {
+        return company;
+    }
+
+    public double getBreakValue() {
+        return breakValue;
     }
 }

@@ -9,9 +9,9 @@ public class Car extends Vehicle {
     private int wheels;
     private int fuelGage;
     private int maxFuel;
-    public SUV s;
 
-    public Car(int doors, int gears, boolean isManual, int wheels, int maxFuel) {
+    public Car(double size,int doors, int gears, boolean isManual, int wheels, int maxFuel) {
+        super(size);
         this.doors = doors;
         this.gears = gears;
         this.currentGear = 0;
@@ -22,7 +22,7 @@ public class Car extends Vehicle {
     }
 
     public void changeGear(int pushGear){
-        if(pushGear == 1 && (pushGear+currentGear)<=gears) {
+        if(pushGear == 1 && (pushGear+this.currentGear)<=this.gears) {
             this.currentGear += pushGear;
         }
         else {
