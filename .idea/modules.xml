@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Barking Dog/Barking Dog.iml" filepath="$PROJECT_DIR$/Barking Dog/Barking Dog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Calculator Challenge/Calculator Challenge.iml" filepath="$PROJECT_DIR$/Calculator Challenge/Calculator Challenge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Casting/Casting.iml" filepath="$PROJECT_DIR$/Casting/Casting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Control Flow Statements Challenge/Control Flow Statements Challenge.iml" filepath="$PROJECT_DIR$/Control Flow Statements Challenge/Control Flow Statements Challenge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Decimal Comparator/Decimal Comparator.iml" filepath="$PROJECT_DIR$/Decimal Comparator/Decimal Comparator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Diagonal Stars/Diagonal Stars.iml" filepath="$PROJECT_DIR$/Diagonal Stars/Diagonal Stars.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Expressions/Expressions.iml" filepath="$PROJECT_DIR$/Expressions/Expressions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Finding Leap Year/Finding Leap Year.iml" filepath="$PROJECT_DIR$/Finding Leap Year/Finding Leap Year.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Flour Pack Problem/Flour Pack Problem.iml" filepath="$PROJECT_DIR$/Flour Pack Problem/Flour Pack Problem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/For Statements/For Statements.iml" filepath="$PROJECT_DIR$/For Statements/For Statements.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ForStatementChallenge/ForStatementChallenge.iml" filepath="$PROJECT_DIR$/ForStatementChallenge/ForStatementChallenge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HelloWorld/HelloWorld.iml" filepath="$PROJECT_DIR$/HelloWorld/HelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Inhertance Challenge/Inhertance Challenge.iml" filepath="$PROJECT_DIR$/Inhertance Challenge/Inhertance Challenge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Input Calculator/Input Calculator.iml" filepath="$PROJECT_DIR$/Input Calculator/Input Calculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Java.iml" filepath="$PROJECT_DIR$/.idea/Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MegaBytes Converter/MegaBytes Converter.iml" filepath="$PROJECT_DIR$/MegaBytes Converter/MegaBytes Converter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Method Overloading/Method Overloading.iml" filepath="$PROJECT_DIR$/Method Overloading/Method Overloading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MethodsInJava/MethodsInJava.iml" filepath="$PROJECT_DIR$/MethodsInJava/MethodsInJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOPs Concepts/OOPs Concepts.iml" filepath="$PROJECT_DIR$/OOPs Concepts/OOPs Concepts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOPs-Inheritance/OOPs-Inheritance.iml" filepath="$PROJECT_DIR$/OOPs-Inheritance/OOPs-Inheritance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OperatorsInJava/OperatorsInJava.iml" filepath="$PROJECT_DIR$/OperatorsInJava/OperatorsInJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Paint Job/Paint Job.iml" filepath="$PROJECT_DIR$/Paint Job/Paint Job.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Person Details/Person Details.iml" filepath="$PROJECT_DIR$/Person Details/Person Details.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpeedConvertor/SpeedConvertor.iml" filepath="$PROJECT_DIR$/SpeedConvertor/SpeedConvertor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sum Digit Challenge/Sum Digit Challenge.iml" filepath="$PROJECT_DIR$/Sum Digit Challenge/Sum Digit Challenge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Switch Statements/Switch Statements.iml" filepath="$PROJECT_DIR$/Switch Statements/Switch Statements.iml" />
+      <module fileurl="file://$PROJECT_DIR$/While Statements/While Statements.iml" filepath="$PROJECT_DIR$/While Statements/While Statements.iml" />
+    </modules>
+  </component>
+</project>
