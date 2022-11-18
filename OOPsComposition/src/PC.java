@@ -9,15 +9,29 @@ public class PC {
         this.motherBoard = motherBoard;
     }
 
-    public Case getTheCase() {
+    public void powerUp() {
+        theCase.pressPowerButton();
+        loadBios();
+        drawLogo();
+    }
+
+    public void loadBios() {
+        motherBoard.loadProgram("Windows");
+    }
+
+    public void drawLogo() {
+        monitor.drawPixelArt(170,180,"red");
+    }
+
+    private Case getTheCase() {
         return theCase;
     }
 
-    public Monitor getMonitor() {
+    private Monitor getMonitor() {
         return monitor;
     }
 
-    public MotherBoard getMotherBoard() {
+    private MotherBoard getMotherBoard() {
         return motherBoard;
     }
 }
