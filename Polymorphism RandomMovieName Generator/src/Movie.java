@@ -44,10 +44,7 @@ class James extends Movie {
     public James() {
         super("James");
     }
-    @Override
-    public String plot() {
-        return "The Story of Military Men";
-    }
+    //No Plot
 }
 
 class Bajarangi extends  Movie {
