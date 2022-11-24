@@ -78,23 +78,6 @@ public class Hamburger {
         return additionPrice;
     }
 
-    public void setLettuce(boolean lettuce) {
-
-        this.lettuce = lettuce;
-    }
-
-    public void setTomato(boolean tomato) {
-        this.tomato = tomato;
-    }
-
-    public void setCarrot(boolean carrot) {
-        this.carrot = carrot;
-    }
-
-    public void setCaliFlower(boolean caliFlower) {
-        this.caliFlower = caliFlower;
-    }
-
     public String getRollType() {
         return rollType;
     }
@@ -105,21 +88,5 @@ public class Hamburger {
 
     public String getName() {
         return name;
-    }
-
-    public boolean isLettuce() {
-        return lettuce;
-    }
-
-    public boolean isTomato() {
-        return tomato;
-    }
-
-    public boolean isCarrot() {
-        return carrot;
-    }
-
-    public boolean isCaliFlower() {
-        return caliFlower;
     }
 }

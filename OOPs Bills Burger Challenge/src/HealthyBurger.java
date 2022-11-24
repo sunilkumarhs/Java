@@ -13,31 +13,10 @@ public class HealthyBurger extends Hamburger{
     }
 
     @Override
-    public double buyBurger(int qty) {
-        return super.buyBurger(qty);
-    }
-
-    @Override
     public double additionalItems(String addition) {
-        super.setLettuce(addition.contains("1"));
-        super.setTomato(addition.contains("2"));
-        super.setCarrot(addition.contains("3"));
-        super.setCaliFlower(addition.contains("4"));
+        double additionPrice = super.additionalItems(addition);
         peaNut = addition.contains("5");
         cheese = addition.contains("6");
-        double additionPrice = 0;
-        if(super.isLettuce()) {
-            additionPrice += 50;
-        }
-        if(super.isTomato()) {
-            additionPrice += 60;
-        }
-        if(super.isCarrot()) {
-            additionPrice += 55;
-        }
-        if(super.isCaliFlower()) {
-            additionPrice += 65;
-        }
         if(peaNut) {
             additionPrice += 85;
         }
