@@ -1,4 +1,3 @@
-import java.sql.SQLOutput;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -28,7 +27,7 @@ public class Hamburger {
         System.out.println("The "+this.name+" contains "+rollType+" in it");
         System.out.println("The  base price of "+this.name+" :- "+this.basePrice+"Rs");
         System.out.println("The additional components that are can be added are :");
-        System.out.println("0.Nothing    - +=0Rs \n"+
+        System.out.println("0.Nothing    - +0Rs \n"+
                            "1.Lettuce    - +50Rs \n"+
                            "2.Tomato     - +60Rs  \n"+
                            "3.Carrot     - +55Rs   \n"+
@@ -38,7 +37,7 @@ public class Hamburger {
     public double buyBurger(int qty) {
         double totalAmount = 0;
         for(int i=1;i<=qty;i++){
-            System.out.println("Please enter the number that items to be added to "+i+"th burger");
+            System.out.println("Please enter the number that items to be added to "+i+"th "+this.name);
             String addition = scan.next();
             double totalPrice = 0;
             if(!Objects.equals(addition, "0")) {
@@ -49,11 +48,12 @@ public class Hamburger {
                 totalPrice += this.basePrice;
             }
             totalAmount += totalPrice;
-            System.out.println("Your total price of "+i+"th burger :- "+totalPrice+"Rs");
+            System.out.println("Your total price of "+i+"th "+this.name+" :- "+totalPrice+"Rs");
             System.out.println("");
         }
         System.out.println("--------------------------------------------------------------------------------------------");
-        System.out.println("Your total amount of "+qty+" burgers :- "+totalAmount+"Rs");
+        System.out.println("Your total amount of "+qty+" "+this.name+" :- "+totalAmount+"Rs");
+        System.out.println("--------------------------------------------------------------------------------------------");
         return totalAmount;
     }
 
@@ -79,6 +79,7 @@ public class Hamburger {
     }
 
     public void setLettuce(boolean lettuce) {
+
         this.lettuce = lettuce;
     }
 
