@@ -2,10 +2,10 @@ public class DaysOfTheWeek{
     public static void main(String[] args) {
         DaysOfTheWeek.printDayOfTheWeek(5);
         DaysOfTheWeek.printDayOfTheWeek(1);
+
     }
     public static void printDayOfTheWeek(int day) {
-        int num = day;
-        switch(num) {
+        switch(day) {
             case 0:
                 System.out.println("Sunday");
                 break;
