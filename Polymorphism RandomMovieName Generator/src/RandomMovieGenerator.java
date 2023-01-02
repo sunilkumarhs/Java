@@ -2,9 +2,10 @@ public class RandomMovieGenerator {
     public static void main(String[] args) {
         for (int i=1;i<=10;i++) {
             Movie movie = randomMovie();
-            System.out.println("The Movie #"+i+" name is :- "+movie.getName()+"\n"
-                               +"The Plot of the Movie is :- "+movie.plot()+"\n");
-
+            System.out.println("The Movie #"+i+" name is :- "+movie.getClass().getSimpleName()+"\n"
+                               +"The Plot of the Movie is :- "+movie.plot());
+            movie.watchMovie();
+            System.out.println("*".repeat(50));
         }
     }
     public static  Movie randomMovie() {

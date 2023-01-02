@@ -1,28 +1,33 @@
 public class Movie {
-    private String name;
-    public Movie(String name) {
-        this.name=name;
+    private String generes;
+    public Movie() {
+    }
+    public void watchMovie() {
+        generes=this.getClass().getSimpleName();
+        System.out.println("This Movie is "+generes+" movie");
     }
     public String plot() {
         return "No Plot in this Movie";
     }
-
-    public String getName() {
-        return name;
-    }
 }
-class Kanthara extends Movie {
-    public Kanthara() {
-        super("Kanthara");
+class Kanthara extends Movie implements Generes {
+    @Override
+    public void watchMovie() {
+        ScienceFriction sf = new ScienceFriction();
+        sf.watchMovie();
+
     }
+
     public String plot() {
         return "The Mysterious Forest";
     }
 }
 
-class Kranthi extends Movie {
-    public Kranthi() {
-        super("Kranthi");
+class Kranthi extends Movie implements Generes {
+    @Override
+    public void watchMovie() {
+        Adventure ad = new Adventure();
+        ad.watchMovie();
     }
     @Override
     public String plot() {
@@ -30,9 +35,11 @@ class Kranthi extends Movie {
     }
 }
 
-class KGF extends  Movie {
-    public KGF() {
-        super("KGF-2");
+class KGF extends  Movie implements Generes {
+    @Override
+    public void watchMovie() {
+        Adventure ad = new Adventure();
+        ad.watchMovie();
     }
     @Override
     public String plot() {
@@ -40,18 +47,21 @@ class KGF extends  Movie {
     }
 }
 
-class James extends Movie {
-    public James() {
-        super("James");
+class James extends Movie implements Generes{
+    @Override
+    public void watchMovie() {
+        Comedy cd = new Comedy();
+        cd.watchMovie();
     }
     //No Plot
 }
 
-class Bajarangi extends  Movie {
-    public Bajarangi() {
-        super("Bajarangi-2");
+class Bajarangi extends  Movie implements Generes{
+    @Override
+    public void watchMovie() {
+        ScienceFriction sf = new ScienceFriction();
+        sf.watchMovie();
     }
-
     @Override
     public String plot() {
         return "The Story of Dhanvantri Roopa";
