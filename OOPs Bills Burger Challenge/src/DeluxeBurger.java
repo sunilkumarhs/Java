@@ -12,7 +12,7 @@ public class DeluxeBurger extends  Hamburger{
     public void viewBurger() {
         System.out.println("The "+ this.getName() +" contains "+ this.getRollType() +" in it");
         System.out.println("The  base price of "+ this.getName() +" :- "+ this.getBasePrice() +"Rs");
-        System.out.println("The will be no additional components added to this burger!!");
+        System.out.println("There will be no additional components added to this burger!!");
         System.out.println("Instead you will get chips and drinks as side component of this burger");
     }
 

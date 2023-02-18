@@ -1,6 +1,6 @@
 public class BinaryConverssion {
     public static void main(String[] args) {
-        int[] arr={0,1,0,0,0,1,0,0};
+        int[] arr={0,1,0,0,0,1,0,0,1,0,0,0,0,0,1,1,0,0,0,1,0};
         int num=Solution.toogle(arr.length,arr);
         System.out.println("The maximum number of 1's in the arr is: "+num);
     }
@@ -8,7 +8,6 @@ public class BinaryConverssion {
 
 class Solution {
     public static int toogle(int n, int[] arr) {
-        int[] arr1=arr;
         int num=0;
         int st=0,en=0;
         int count =0,countValue=0;
