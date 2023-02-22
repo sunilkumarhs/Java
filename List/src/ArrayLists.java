@@ -28,7 +28,7 @@ public class ArrayLists {
         groceryItemsList.add(new GroceryItems("Butter"));
         groceryItemsList.add(new GroceryItems("Potato", "Vegetable",8));
 //        groceryItemsList.add("LionHoney"); Type error
-        System.out.println(groceryItemsList); 
+        System.out.println(groceryItemsList);
         groceryItemsList.add(0,
                 new GroceryItems("Apple", "Fruits", 6));
         System.out.println(groceryItemsList);
