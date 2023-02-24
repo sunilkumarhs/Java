@@ -36,24 +36,40 @@ public class GroceryList {
     private static ArrayList<String> addItem(ArrayList<String> addList) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter the item to add into the list:");
-        String item = scan.nextLine();
-        if(addList.contains(item)) {
-            System.out.println("This item already exists in the list");
-        }else {
-            addList.add(item);
+        String[] items = scan.nextLine().split(",");
+        for(String i : items) {
+            String item = i.trim();
+            if(addList.contains(item)) {
+                System.out.println(item+" already exists in the list");
+            }else {
+                addList.add(item);
+            }
         }
+//        if(addList.contains(item)) {
+//            System.out.println("This item already exists in the list");
+//        }else {
+//            addList.add(item);
+//        }
         return addList;
     }
 
     private static ArrayList<String> removeItem(ArrayList<String> removeList) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter the item to remove from the list:");
-        String item = scan.nextLine();
-        if(removeList.contains(item)) {
-            removeList.remove(item);
-        }else {
-            System.out.println("The item does not present in the list!!");
+        String[] items = scan.nextLine().split(",");
+        for(String i : items) {
+            String item = i.trim();
+            if(removeList.contains(item)) {
+                removeList.remove(item);
+            }else {
+                System.out.println(item+" doesn't exists in the list");
+            }
         }
+//        if(removeList.contains(item)) {
+//            removeList.remove(item);
+//        }else {
+//            System.out.println("The item does not present in the list!!");
+//        }
         return removeList;
     }
 }
