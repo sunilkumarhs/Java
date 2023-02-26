@@ -1,4 +1,5 @@
 import java.util.LinkedList;
+import java.util.ListIterator;
 
 public class LinkedListOperations {
     public static void main(String[] args) {
@@ -11,7 +12,14 @@ public class LinkedListOperations {
 
         addElements(listOper);
         System.out.println(listOper);
-
+        System.out.println();
+        System.out.println("List Retrieval");
+        listRetreval(listOper);
+        System.out.println();
+        System.out.println("List Printing");
+        printList(listOper);
+        System.out.println();
+        System.out.println("List Removal");
         removeElements(listOper);
         System.out.println(listOper);
     }
@@ -48,5 +56,47 @@ public class LinkedListOperations {
         System.out.println("The element removed is: "+r4);
         String r5 = list.pop();
         System.out.println("The element removed is: "+r5);
+    }
+    private static void listRetreval(LinkedList<String> list) {
+        System.out.println("The Retrieved element is: "+list.get(4));
+        System.out.println("The Retrieved element index is: "+list.indexOf("Mysore"));
+        System.out.println("The Retrieved element is: "+list.getFirst());
+        System.out.println("The Retrieved element is: "+list.getLast());
+        //Queue Retrieval
+        System.out.println("The Retrieved element is: "+list.element());
+        //Stack Retrieval
+        System.out.println("The Retrieved element is: "+list.peek());
+        System.out.println("The Retrieved element is: "+list.peekFirst());
+        System.out.println("The Retrieved element is: "+list.peekLast());
+    }
+
+    private static void printList(LinkedList<String> list) {
+        System.out.println("The Starting Element is: "+list.getFirst());
+        for(int i=1;i<list.size();i++) {
+            System.out.println("---->From "+list.get(i-1)+" to "+list.get(i));
+        }
+        System.out.println("The Ending Element is: "+list.getLast());
+    }
+
+    private static void printList1(LinkedList<String> list) {
+        System.out.println("The Starting Element is: "+list.getFirst());
+        String start = list.getFirst();
+        for(String element : list) {
+            System.out.println("---->From "+start+" to "+element);
+            start = element;
+        }
+        System.out.println("The Ending Element is: "+list.getLast());
+    }
+
+    private static void printList2(LinkedList<String> list) {
+        System.out.println("The Starting Element is: "+list.getFirst());
+        String preElement = list.getFirst();
+        ListIterator<String> iterator = list.listIterator();
+        while(iterator.hasNext()) {
+            var element = iterator.next();
+            System.out.println("---->From "+preElement+" to "+element);
+            preElement = element;
+        }
+        System.out.println("The Ending Element is: "+list.getLast());
     }
 }
