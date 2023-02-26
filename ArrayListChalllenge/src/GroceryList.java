@@ -45,11 +45,6 @@ public class GroceryList {
                 addList.add(item);
             }
         }
-//        if(addList.contains(item)) {
-//            System.out.println("This item already exists in the list");
-//        }else {
-//            addList.add(item);
-//        }
         return addList;
     }
 
@@ -65,11 +60,6 @@ public class GroceryList {
                 System.out.println(item+" doesn't exists in the list");
             }
         }
-//        if(removeList.contains(item)) {
-//            removeList.remove(item);
-//        }else {
-//            System.out.println("The item does not present in the list!!");
-//        }
         return removeList;
     }
 }
