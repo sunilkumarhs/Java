@@ -18,10 +18,15 @@ public class LinkedListOperations {
         System.out.println();
         System.out.println("List Printing");
         printList(listOper);
+        System.out.println("");
+        printList1(listOper);
+        System.out.println("");
+        printList2(listOper);
         System.out.println();
         System.out.println("List Removal");
         removeElements(listOper);
         System.out.println(listOper);
+
     }
     private static void addElements(LinkedList<String> list) {
         list.add("Mumbai");
@@ -82,6 +87,8 @@ public class LinkedListOperations {
         System.out.println("The Starting Element is: "+list.getFirst());
         String start = list.getFirst();
         for(String element : list) {
+            if(element == start)
+                continue;
             System.out.println("---->From "+start+" to "+element);
             start = element;
         }
@@ -94,6 +101,8 @@ public class LinkedListOperations {
         ListIterator<String> iterator = list.listIterator();
         while(iterator.hasNext()) {
             var element = iterator.next();
+            if(element == preElement)
+                continue;
             System.out.println("---->From "+preElement+" to "+element);
             preElement = element;
         }
