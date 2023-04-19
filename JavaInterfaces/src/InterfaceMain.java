@@ -15,6 +15,14 @@ public class InterfaceMain {
         System.out.println("Truck Class Details");
         Truck truck = new Truck();
         truck.track();
+        System.out.println("-".repeat(30));
+        System.out.println("Rocket Class Details");
+        Rocket rocket = new Rocket();
+        rocket.takeOff();
+        rocket.track();
+        rocket.fly();
+        rocket.land();
+        rocket.launchOrbit();
     }
     private static void inFlight(FlightEnabled flight) {
         flight.takeOff();
