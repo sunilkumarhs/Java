@@ -88,7 +88,7 @@ public class Store {
         }
 
 //        storeProducts.add(new ArtObjects("Oil Paint",1750,"Asian Oil paint is released in 2010"));
-//        storeProducts.add(new ArtObjects("Water Proof Paint",2450,"Asian water proof paint is released in 2015"));
+//        storeProducts.add(new ArtObjects("Water Proof Paint",2450,"Asian waterproof paint is released in 2015"));
 //        storeProducts.add(new Furnitures("Chair",2000,"Very good wood is used"));
 //        storeProducts.add(new Furnitures("Table",4500,"Table as ver good quality of good"));
 //        listProducts();
