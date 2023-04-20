@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.List;
+
 public class InterfaceMain {
     public static void main(String[] args) {
         System.out.println("Bird Class Details");
@@ -23,6 +26,19 @@ public class InterfaceMain {
         rocket.fly();
         rocket.land();
         rocket.launchOrbit();
+        LinkedList<FlightEnabled> flight = new LinkedList<>();
+        flight.add(jet);
+        List<FlightEnabled> betterFlight = new LinkedList<>();
+        betterFlight.add(jet);
+        System.out.println("Linked List Flight Enabled:");
+        triggerFlight(flight);
+        flyFlight(flight);
+        landFlight(flight);
+        System.out.println("Better Linked List Flight Enabled:");
+        triggerFlight(betterFlight);
+        flyFlight(betterFlight);
+        landFlight(betterFlight);
+
     }
     private static void inFlight(FlightEnabled flight) {
         flight.takeOff();
@@ -31,5 +47,23 @@ public class InterfaceMain {
             tracks.track();
         }
         flight.land();
+    }
+
+    private static void triggerFlight(List<FlightEnabled> flights) {
+        for (var flight : flights) {
+            flight.takeOff();
+        }
+    }
+
+    private static void flyFlight(List<FlightEnabled> flights) {
+        for (var flight : flights) {
+            flight.fly();
+        }
+    }
+
+    private static void landFlight(List<FlightEnabled> flights) {
+        for (var flight : flights) {
+            flight.land();
+        }
     }
 }
