@@ -6,6 +6,10 @@ enum FlightStages implements Tracking{GROUNDED, LAUNCH, CRUISE, DATA_COLLECTION;
             System.out.println("Monitoring "+this);
         }
     }
+    public FlightStages getNextStages(){
+        FlightStages[] allStages = values();
+        return allStages[(ordinal()+1)%allStages.length];
+    }
 }
 record HawkFly(String name, String type) implements FlightEnabled{
 
