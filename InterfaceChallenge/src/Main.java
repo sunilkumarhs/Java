@@ -10,7 +10,7 @@ public class Main {
 
         mappables.add(new UtilityLine("College",UtilityType.FIBER_OPTIC));
         mappables.add(new UtilityLine("House",UtilityType.WATER));
-        
+
         for(var m : mappables){
             Mappable.mapIt(m);
         }
