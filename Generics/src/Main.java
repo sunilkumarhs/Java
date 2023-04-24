@@ -1,4 +1,7 @@
-interface Player{}
+interface Player{
+    String name();
+    String position();
+}
 record cricketPlayer(String name, String position) implements Player{}
 record footBallPlayer(String name, String position) implements Player{}
 public class Main {
@@ -6,6 +9,7 @@ public class Main {
 //        CricketTeams rcb = new CricketTeams("Royal Challengers Bangalore");
 //        CricketTeams lsg = new CricketTeams("Lucknow Super Gaints");
 //        scoreResult(rcb,189,lsg,150);
+        var RCB = new Affiliation("Bangalore","CricketTeam","IND");
         var virat = new cricketPlayer("Virat Kholi","Batsman");
         var siraj = new cricketPlayer("Mohammad Siraj","Bowler");
         var rahul = new cricketPlayer("K L Rahul","Batsman");
@@ -25,15 +29,16 @@ public class Main {
 //        gfc.addTeamPlayer(gurkrith);
 //        bfc.listTeamMembers();
 //        gfc.listTeamMembers();
-        Team<footBallPlayer> bfc1 = new Team<>("Bangalore FootBall Club");
-        Team<footBallPlayer> gfc1 = new Team<>("Goa FootBall Club");
+        Team<footBallPlayer,Affiliation> bfc1 = new Team<>("Bangalore FootBall Club");
+        Team<footBallPlayer,Affiliation> gfc1 = new Team<>("Goa FootBall Club");
         scoreResult(bfc1,2,gfc1,1);
         bfc1.addTeamPlayer(chetri);
         gfc1.addTeamPlayer(gurkrith);
         bfc1.listTeamMembers();
         gfc1.listTeamMembers();
-        Team<cricketPlayer> rcb1 = new Team<>("Royal Challengers Bangalore");
-        Team<cricketPlayer> lsg1 = new Team<>("Lucknow Super Gaints");
+        System.out.println("-".repeat(80));
+        Team<cricketPlayer,Affiliation> rcb1 = new Team<>("Royal Challengers Bangalore",RCB);
+        Team<cricketPlayer,String> lsg1 = new Team<>("Lucknow Super Gaints","Lucknow city in UP - cricketTeam in IND");
         scoreResult(rcb1,189,lsg1,150);
         rcb1.addTeamPlayer(virat);
         rcb1.addTeamPlayer(siraj);
