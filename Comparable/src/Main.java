@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Random;
 
 public class Main {
@@ -29,10 +30,22 @@ public class Main {
         System.out.println(Arrays.toString(students));
         int result= sunil.compareTo(new Student("Ganesh"));
         System.out.println("compare Result : "+result);
+        System.out.println("-".repeat(60));
+        Comparator<Student> gpaComparator = new GpaComparator();
+        Arrays.sort(students,gpaComparator);
+        System.out.println(Arrays.toString(students));
+    }
+}
+
+class GpaComparator implements Comparator<Student> {
+
+    @Override
+    public int compare(Student o1, Student o2) {
+        return (o1.gpa + o1.name).compareTo(o2.gpa + o2.name);
     }
 }
 class Student implements Comparable<Student>{
-    private String name;
+    protected String name;
     private static int LAST_ID = 1000;
     private static Random random = new Random();
     private int id;
