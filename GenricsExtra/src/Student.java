@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Student {
+public class Student implements QueryItem {
     private String name;
     private String course;
     private int courseYear;
@@ -26,4 +26,14 @@ public class Student {
         return courseYear;
     }
 
+    @Override
+    public boolean checkItem(String fieldName, String value) {
+        String fName = fieldName.toUpperCase();
+        return switch (fName) {
+            case "NAME" -> name.equalsIgnoreCase(value);
+            case "COURSE" -> course.equalsIgnoreCase(value);
+            case "COURSEYEAR" -> courseYear == (Integer.parseInt(value));
+            default -> false;
+        };
+    }
 }
