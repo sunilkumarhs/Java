@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -30,8 +31,8 @@ public class Main {
 
     public static void printList(List<? extends Student> students) {
         for(var student : students) {
-//            System.out.println(student.getCourseYear()+" : "+student);
-            System.out.println(student);
+            System.out.println(student.getCourseYear()+" : "+student);
+//            System.out.println(student);
         }
         System.out.println();
     }
